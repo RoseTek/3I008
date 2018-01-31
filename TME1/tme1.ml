@@ -2,6 +2,7 @@
 (* HELLO WORLD *)
 (* print_string "hello world!\n" ;; *)
 
+(* ------------------------------------------------------------------------- *)
 
 (* ECHO *)
 (* let rec ech n = *)
@@ -10,6 +11,7 @@
 (*   else print_string ("\n");; *)
 (* ech 1;; *)
 
+(* ------------------------------------------------------------------------- *)
 
 (* SOMME *)
 (* let size = Array.length Sys.argv-1;; *)
@@ -23,6 +25,7 @@
 (*   loop 1 0. ;; *)
 (* print_string ("Somme :" ^(string_of_float meh));; *)
 
+(* ------------------------------------------------------------------------- *)
 
 (* CAT *)
 (* let my_cat = *)
@@ -34,26 +37,23 @@
 (*     End_of_file -> print_string "" *)
 (* ;;   *)
 
+(* ------------------------------------------------------------------------- *)
 
-(* TR *)
-let my_tr =
-  try
-    while true do
-      let line = read_line () in
+(* Tentative de TR (???) *)
+(* let pattern = "pattern ?";; *)
 
-      (* partie ou on échange les trucs *)
-      if line.[0] = 'a' then
-	print_string "such wow\n"
-      else
-	print_string "meh meh\n"
-    done
-  with
-    End_of_file -> print_string ""
-;;
+(* let replace line = *)
+(*   print_string (line ^ " filtre avec " ^ pattern ^ "\n"); *)
+(* ;; *)
 
-
-
-
+(* let my_tr = *)
+(*   try *)
+(*     while true do *)
+(*       let line = read_line () in *)
+(*       replace line; *)
+(*     done *)
+(*   with *)
+(*     End_of_file -> print_string "" *)
+(* ;; *)
   
-
-print_string ("\n");;
+(* print_string ("\n");; *)
