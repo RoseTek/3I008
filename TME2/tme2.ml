@@ -49,12 +49,14 @@ let a =  genere_bis 4 :: [genere_bis 5];;
 let a = genere_bis 3 :: a;;
 let a = genere_bis 2 :: a;;
 
+  
 (* let a = ref [] ;; *)
 
   
   (* for i = 10 downto 1 do *)
-  (*   print_string "mourir\n"; *)
-  (*   let a = (genere_bis i) :: a; *)
+  (*   (\* print_string "mourir\n"; *\) *)
+  (*   let a =  1 *)
+  (*   (\* let a = (genere_bis i) :: a; *\) *)
   (* 	       (\* let a = genere_bis 2 :: a *\) *)
   (* done *)
 
@@ -63,3 +65,4 @@ let a = genere_bis 2 :: a;;
 (* let a = ref (genere_bis 1 :: [genere_bis 2]);; *)
   
 (*   a := !a;; *)
+
