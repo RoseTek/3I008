@@ -29,22 +29,37 @@ let rec genere_bis k =
     (genere_liste (genere_bis (k-1)))
 ;;
 
+(* let make_list size = *)
+(*   let rec aux size acc = *)
+(*     if size <= 0 then [42] :: [acc] *)
+(* 			(\* else aux (size - 1) *\) *)
+(*     else (aux (size-1) (genere_bis size)::[acc]) *)
+(*   in *)
+(*   aux size (genere_bis 1) *)
+(* ;; *)
 
-(* CA MARCHE PAS *)
-let genere max =
-  match max with
-  | 1 -> [genere_bis max]
-  | _ -> (genere_bis (max-1))::(genere (max -1))
-;;
+(*   [42;42]::[(genere_bis 2)];; *)
+(*   (genere_bis 1)::[(genere_bis 2)];; *)
+(*       [[(genere_bis 1)]::[(genere_bis 2)]::[(genere_bis 3)]];; *)
+
+
+
+(* let bordel_de_merde taille = *)  
+let a =  genere_bis 4 :: [genere_bis 5];;
+let a = genere_bis 3 :: a;;
+let a = genere_bis 2 :: a;;
+
+(* let a = ref [] ;; *)
+
   
+  (* for i = 10 downto 1 do *)
+  (*   print_string "mourir\n"; *)
+  (*   let a = (genere_bis i) :: a; *)
+  (* 	       (\* let a = genere_bis 2 :: a *\) *)
+  (* done *)
+
+
+
+(* let a = ref (genere_bis 1 :: [genere_bis 2]);; *)
   
-genere 1;;
-genere 2;;
-genere 3;;
-genere 4;;
-genere 5;;
-genere 6;;
-
-
-
-
+(*   a := !a;; *)
