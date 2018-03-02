@@ -1,6 +1,6 @@
 
 
-  (* ---- renvoie le dernier element d'une liste ---- *)
+  (* ---- RENVOIE LE DERNIER ELEMENT D'UNE LISTE ---- *)
 exception ListeVide;;
   
 let rec last list = match list with
@@ -17,7 +17,7 @@ last  [(7 , "meh") ; (14 , "pow") ; (42 , "hi")];;
 last  [1 ; 2 ; 3 ; 4 ; 5 ; 8];;
   
 
-(* ---- renvoie les deux derniers elements de la liste ---- *)
+(* ---- RENVOIE LES DEUX DERNIERS ELEMENTS DE LA LISTE ---- *)
 exception ListeTropCourte;;
   
 let rec last_two list = match list with
@@ -35,7 +35,7 @@ last_two  [(7 , "meh") ; (14 , "pow") ; (42 , "hi")];;
 last_two  [1 ; 2 ; 3 ; 4 ; 5 ; 8];;
 
 
-(* ---- recode List.nth ---- *)
+(* ---- RECODE LIST.NTH ---- *)
 exception FailureNth;;
 
 let rec my_list_nth list i = match list with
@@ -43,6 +43,7 @@ let rec my_list_nth list i = match list with
   | h::t -> if i <= 1 then h else my_list_nth t (i-1)
 ;;
 
+  (* test *)
 my_list_nth  [ "a" ; "b" ; "c" ; "d" ] 2;;
 my_list_nth  ["t"] 2;;
 my_list_nth  [] 2;;
