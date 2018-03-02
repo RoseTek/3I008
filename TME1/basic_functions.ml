@@ -1,19 +1,17 @@
 
-(* HELLO WORLD *)
+  (* HELLO WORLD *)
 print_string "hello world!\n" ;;
 
-(* ------------------------------------------------------------------------- *)
 
-(* ECHO *)
+  (* ECHO *)
 let rec ech n =
   print_string (Sys.argv.(n) ^ " ");
   if n < (Array.length Sys.argv-1) then  ech (n+1)
   else print_string ("\n");;
 ech 1;;
 
-(* ------------------------------------------------------------------------- *)
 
-(* SOMME *)
+  (* SOMME *)
 let size = Array.length Sys.argv-1;;
 let meh =
   let rec loop n r =
@@ -23,9 +21,8 @@ let meh =
   loop 1 0. ;;
 print_string ("Somme :" ^(string_of_float meh));;
 
-(* ------------------------------------------------------------------------- *)
 
-(* CAT *)
+  (* CAT *)
 let my_cat =
   try
     while true do
@@ -34,8 +31,3 @@ let my_cat =
   with
     End_of_file -> print_string ""
 ;;
-
-(* ------------------------------------------------------------------------- *)
-
-(* TR *)
-(* ... *)

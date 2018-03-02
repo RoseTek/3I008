@@ -1,5 +1,5 @@
 
-(* CALCUL_PREFIXE *)
+  (* CALCUL_PREFIXE *)
 let rec calcul_prefixe l =
   match l with
   | [] -> 0
@@ -8,7 +8,7 @@ let rec calcul_prefixe l =
   | _ -> 1
 ;;
   
-(* GENERE_LISTE SUIVANTE*)
+  (* GENERE_LISTE SUIVANTE*)
 (* SKIP tous les elem h dans la liste t et la retourne *)
 let rec skip elem list =
   match list with
@@ -33,9 +33,11 @@ let gen k =
   let rec aux acc n =
     if n = 0 then acc
     else aux ((genere_bis n)::acc) (n-1) in
-  aux [] k;;
+  aux [] k
+;;
 
-  
+
+  (* test *)
 gen 1;;
 gen 2;;
 gen 3;;
