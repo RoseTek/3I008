@@ -1,24 +1,25 @@
+  (* rappel how to use *)
+(* new_array = next_gen init_gen *)		       
+(* let my_cell = Alive;; *)
+(* match my_cell with *)
+(* | Alive -> ... *)
+(* | Dead -> ... *)
 
+  
   (* TYPE SOME REPRESENTANT UNE CELLULE *)
 type cell = Alive | Dead;;
 type grid = cell array array;;
 
-  (* PREMIERE GENERATION *)
-let init_gen = [| [|Alive ; Dead|] ; [|Dead; Alive|] |] ;;	    
-let init_gen = [| [|Alive ; Alive ; Dead ; Alive|] ;
-		  [|Alive ; Dead ; Alive ; Dead|] ;
-		  [|Dead ; Dead ; Dead ; Alive|] ;
-		  [|Alive ; Alive ; Dead ; Dead|] |]
-;;
 		 
   (* AFFICHAGE *)
 let affiche tab =
+  print_string ("\n");
   for ligne = 0 to Array.length tab - 1 do
       for col = 0  to Array.length tab.(0) - 1 do
 	if (tab.(ligne).(col) = Alive) then
 	  print_string ("X")
 	else
-	  print_string ("_")
+	  print_string (" ")
       done;
       print_string ("\n")
   done;
@@ -58,21 +59,21 @@ let next_gen tab =
 ;;
 
 
-  (* FONCTION CONTINUE *)
+  (* BOUCLE D'INTERACTION *)
+let rec continue grid =
+  affiche grid ;
+  let new_grid = next_gen grid in
+  let line = read_line () in
+  match line with
+  | "q" -> ()
+  | _ -> continue new_grid
+;;
 
-  
+  (* TEST *)
 
-  (* TESTS *)
 let init_gen = [| [|Alive ; Alive ; Dead ; Alive|] ;
 		  [|Alive ; Dead ; Alive ; Dead|] ;
 		  [|Dead ; Dead ; Dead ; Alive|] ;
 		  [|Alive ; Alive ; Dead ; Dead|] |];;
-let meh = next_gen init_gen;;
-affiche init_gen ;;
-affiche meh;;
-(* new_array = next_gen init_gen *)		       
-(* let my_cell = Alive;; *)
-(* match my_cell with *)
-(* | Alive -> ... *)
-(* | Dead -> ... *)
 
+continue init_gen;;
