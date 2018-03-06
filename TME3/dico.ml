@@ -32,9 +32,23 @@ let ajoute dico mot =
   traverse 0 dico
 ;;
 
+  
+  (* CONSTRUIT : 50 minutes *)
+let rec construit_aux dico list =
+  match list with
+  | [] -> dico
+  | h::t -> construit_aux (ajoute dico h) t
+;;
 
-  (* CONSTRUIT *)
+let construit list = construit_aux [] list;;
+  
   (* LISTE_DE_DICT *)
-  (* AFFICHE *)
-  (* MANIP INTERRACTIVE DE DICO *)
-  (* ENREGISTREMENT DANS FICHIER *)
+  (* prend un dictionnaire et renvoie une liste de mots *)
+let rec find node acc =
+  match node with
+  | Lettre (lettre, fin, children) :: t -> print_string "test"
+;;
+
+  find arbre "";;
+let arbre = construit ["chat" ; "chien" ];;
+
