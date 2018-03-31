@@ -19,24 +19,34 @@ let empty =
     words = M.empty;
   }
 
+
+
 let has_empty_word { eow; words } =
   failwith "Unimplemented"
 
-let rec is_empty { eow; words } =
-  failwith "Unimplemented"
+(* ??? *)
+let rec is_empty { eow; words } = eow
 
+	   
 let add word lexicon =
-  failwith "Unimplemented"
-
+  (* print_string ("ajoute " ^ word ^ "\n") ; *)
+  (* lexicon *)
+    failwith "Unimplemented"
+	   
 let rec to_iter { eow; words } =
   failwith "Unimplemented"
 
+	   
 let letter_suffixes { eow; words } letter =
   failwith "Unimplemented"
 
+	   
 let rec filter_min_length len { eow; words } =
   failwith "Unimplemented"
 
+
+
+	   
 let load_file f =
   let rec load_channel channel acc =
     match input_line channel with
