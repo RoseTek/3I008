@@ -29,9 +29,7 @@ let rec is_empty { eow; words } = eow
 
 	   
 let add word lexicon =
-  (* print_string ("ajoute " ^ word ^ "\n") ; *)
-  (* lexicon *)
-    failwith "Unimplemented"
+  failwith "Unimplemented"
 	   
 let rec to_iter { eow; words } =
   failwith "Unimplemented"

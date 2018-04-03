@@ -2,23 +2,21 @@ open Boggle
        
 (* n'ayant pas réussit à terminer le projet,
    le main contient des exemples de 
-   fonctionnalités implémentées *)
+   fonctionnalités implémentées de board *)
 
-(* exception MyEx;; *)
+       
+exception MyEx;;
   
-(* let board = Board.make 10 ( RandomLetter.picker RandomLetter.Distribution.fr );; *)
-(* let _ =  Board.print board;; *)
+let board = Board.make 10 ( RandomLetter.picker RandomLetter.Distribution.fr );;
+let _ =  Board.print board;;
 
-(* let board_string = Board.from_string "atrseulcnmtehtsc";; *)
-(* let get_board b = *)
-(*   match b with *)
-(*   | None -> raise MyEx *)
-(*   | Some bo -> bo;; *)
-(* let _ = Board.print (get_board board_string);; *)
-(* let _ = Board.neighbours (get_board board_string) (1,1);; *)
-
-(* let _ = Lexicon.load_file "dict/dico_fr_petit.txt" *)
-(* let _ =  *)
+let board_string = Board.from_string "atrseulcnmtehtsc";;
+let get_board b =
+  match b with
+  | None -> raise MyEx
+  | Some bo -> bo;;
+let _ = Board.print (get_board board_string);;
+let _ = Board.neighbours (get_board board_string) (1,1);;
 
 
 
